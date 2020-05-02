@@ -38,15 +38,17 @@ export default {
   methods: {
     register() {
       console.log('register!!');
+      this.$router.push({name: 'Register'})
     },
     sigin() {
       console.log('sigin!!');
+      this.$router.push({name: 'Login'})
     },
   },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .view-landing {
 background: transparent linear-gradient(180deg, #5640ff 0%, #586fff 100%) 0%
