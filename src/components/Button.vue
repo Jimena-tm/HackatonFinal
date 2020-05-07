@@ -9,13 +9,16 @@ export default {
     name: 'Button',
     props: {
         type: String,
+        fullWidth: {
+            type: Boolean,
+        },
     },
     computed: {
         classValue() {
-            /* if (this.type == 'primary') return 'button-primary'; //2h43'
+            if (this.type == 'primary') return 'button-primary'; //2h43'
             if (this.type == 'secondary') return 'button-secondary';
-            if (this.type =='ghost') return 'button-ghost'; */
-            return this.type === 'primary' ? 'button-primary' : 'button-ghost';
+            if (this.type =='ghost') return 'button-ghost';
+            /* return this.type === 'primary' ? 'button-primary' : 'button-ghost'; */
         },
     },
     methods: {
@@ -27,7 +30,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .button {
     width: 300px;
     height: 50px;
@@ -35,6 +38,7 @@ export default {
     opacity: 1;
     text-decoration: none;
     cursor: pointer;
+    text-align: center;
 
     &-primary {
         background: #ff1558 0% 0% no-repeat padding-box;
@@ -46,7 +50,12 @@ export default {
     }
 
     &-secondary {
-        background: blue;
+        background: #5640FF 0% 0% no-repeat padding-box;;
+        border: none;
+        color: #ffffff;
+        font-family: Poppins;
+        font-weight: bold;
+        font-size: 1.5rem;
     }
 
     &-ghost {

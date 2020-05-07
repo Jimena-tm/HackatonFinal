@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import store from '@/store';
 
 Vue.use(VueRouter);
 
@@ -12,12 +13,12 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import('../views/login/Login.vue'),
+    component: () => import('../views/auth/Login.vue'),
   },
   {
     path: '/register',
     name: 'Register',
-    component: () => import('../views/register/Register.vue'),
+    component: () => import('../views/auth/Register.vue'),
   },
   {
     path: '/',
@@ -43,6 +44,10 @@ const routes = [
         component: () => import('../views/account/Account.vue'),
       },
     ],
+    beforeEnter: (to, from, next) => {
+      if (store.state.authStore.isLogin) next();
+      next({ name: 'Login' });
+    },
   },
 ];
 

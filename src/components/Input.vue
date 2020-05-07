@@ -1,5 +1,15 @@
 <template>
-    <form class="regist" action="">
+    <div class="wrap-input">
+        <label v-if="label">{{ label }}</label>
+        <input
+        :value="value"
+        @input="updateInput"
+        :type="type"
+        :placeholder="placeholder"
+        :required="required"
+        class="input"
+        />
+    <!-- <form class="regist" action="">
             <div class="datos">
                 <label for="">Nombres </label><br>
                 <input type="text" placeholder="Escriba aquí…"><br><br>
@@ -18,18 +28,63 @@
                 <br><br>
                 <button>Ingresar</button>
             </div>
-    </form>
+    </form> -->
+    </div>
 </template>
 
 <script>
 export default {
-
-}
+    name: 'Input',
+    props: {
+        value: [String, Number],
+        placeholder: String,
+        label: String,
+        type: {
+            type: String,
+            default: 'text'
+        },
+        required: {
+            type: Boolean,
+        },
+    },
+    data () {
+        return {
+            inpValue: '',
+        };
+    },
+    methods: {
+        updateInput(value) {
+            this.$emit('input', value.target.value);
+        },
+    },
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.wrap-input{
+    margin-bottom: 20px;
 
-.regist .datos {
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #BAB8CC;
+        text-transform: uppercase;
+    }
+}
+    .input {
+    border: 1px solid #bab8cc;
+    padding: 18px 10px;
+    border-radius: 5px;
+    width: 100%;
+    color: #4e4e4e;
+
+    &:focus {
+        outline: none;
+        border-color: #5640FF;
+    }
+}
+
+/* .regist .datos {
     text-align: left;
     padding: 20px;
     display: block;
@@ -96,6 +151,5 @@ input::placeholder{
     left: 280px;
     text-decoration: none;
     color: #ffffff;
-}
-
+} */
 </style>
