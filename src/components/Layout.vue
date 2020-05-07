@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Nav />
+    <Header />
     <Main>
       <router-view></router-view>
     </Main>
@@ -8,13 +8,13 @@
 </template>
 
 <script>
-import Nav from './Nav.vue';
+import Header from './Header.vue';
 import Main from './Main.vue';
 
 export default {
   name: 'Layout',
   components: {
-      Nav,
+      Header,
       Main,
     },
 };

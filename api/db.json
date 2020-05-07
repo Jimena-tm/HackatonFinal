@@ -1,15 +1,26 @@
 {
   "users": [
     {
-      "name": "Jimena Torres",
-      "username": "jtorresm",
+      "name": "javier cardenas",
+      "username": "jcardenas",
       "password": "1234567",
-      "age": "27",
-      "phone": "999888777",
-      "place": "Lima",
-      "specialization": "FrontEnd",
+      "age": "24",
+      "phone": "999888555",
+      "place": "lima",
+      "specialization": "backend",
       "firstTime": true,
       "id": 1
+    },
+    {
+      "name": "paloma torres",
+      "username": "ptorres",
+      "password": "1234567",
+      "age": "24",
+      "phone": "999555222",
+      "place": "lima",
+      "specialization": "ux",
+      "firstTime": true,
+      "id": 2
     }
   ]
 }
