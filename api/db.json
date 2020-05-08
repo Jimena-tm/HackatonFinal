@@ -1,3 +1,15 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": "Maria Noriega",
+      "username": "mnoriega",
+      "password": "1234567",
+      "age": "22",
+      "phone": "999888777",
+      "place": "Lima",
+      "specialization": "FrontEnd",
+      "firstTime": true,
+      "id": 1
+    }
+  ]
 }
