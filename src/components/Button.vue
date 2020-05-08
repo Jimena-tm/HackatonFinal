@@ -31,12 +31,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 .button {
     width: 300px;
     height: 50px;
     border-radius: 25px;
     opacity: 1;
     text-decoration: none;
+    font-family: 'Poppins';
     cursor: pointer;
     text-align: center;
 
