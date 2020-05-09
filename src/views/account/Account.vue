@@ -95,7 +95,6 @@ import { mapState, mapMutations } from 'vuex';
 import { SET_USER } from '@/views/auth/store/mutatios-type';
 import Input from "@/components/Input.vue";
 import Button from "@/components/Button.vue";
-
 export default {
   name: 'Account',
   components: {
@@ -162,13 +161,11 @@ h1{
   margin-left:220px;
   padding-top: 50px;
 }
-
 h2{
   margin-left:220px;
   margin-top: 30px;
   font-size: 2rem;
 }
-
 .form {
   margin-top: 20px;
   margin-left: 250px;
@@ -176,8 +173,6 @@ h2{
   grid-template-columns: 500px 500px;
   grid-column-gap: 50px
 }
-
-
 .inp1 {
   margin-top: 20px;
   margin-left: 250px;
