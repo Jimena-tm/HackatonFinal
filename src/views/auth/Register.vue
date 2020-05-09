@@ -1,8 +1,13 @@
 <template>
   <div class="view-register">
-    <div class="image">
-      <img src="@/assets/imagenes/manbook.png" alt="" />
+    <div class="logo">
+        <img src="@/assets/imagenes/logotipo.png" alt="">
     </div>
+
+    <div class="contenedor">
+        <div class="fila1">
+          <img src="@/assets/imagenes/manbook.png" alt="" />
+        </div>
     <!-- <section id="logo">
       <img src="@/assets/imagenes/logotipo.png" alt="" />
     </section>
@@ -12,8 +17,9 @@
           <div class="frm">
               <img src="@/assets/imagenes/manbook.png" alt="" />
               <br/> -->
-          <div class="form">
+          <div class="fila2">
             <h1>Registro</h1>
+            <br/>
             <form @submit.prevent="handleSubmit" action="">
               <Input
               @input="(value) => (name = value)"
@@ -78,7 +84,7 @@
          <!--</div>
       </div>
     </section> -->
-
+    </div>
   </div>
 </template>
 
@@ -142,76 +148,93 @@ export default {
 
 <style lang="scss" scoped>
 .view-register {
-  display: flex;
-
-
-  .image {
-    width: 60%;
-  };
-  .form {
-    width: 40%;
-    padding: 40px;
-    align-self: center;
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
-  h1 {
-    font-family: 'Poppins';
-    text-align: center;
-    margin-bottom: 40px;
-  }
-}
-
-
-/* .view-register {
   height: 100vh;
 }
 
-section {
-    width: 100%;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
 .contenedor {
-    width: 98%;
-    margin: auto;
-}
-
-#wrap {
-    margin: 50px;
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 img {
-    max-width: 100%;
+    padding-top: 180px;
+    width: 100%;
 }
-
-#logo {
+.logo {
+    background: #5640FF;
+}
+.logo img {
     display: block;
-    padding-left: 20px;
-    background: black;
-}
-.frm img{
-    max-width: 100%;
-}
-.frm {
-    position: relative;
-    display: flex;
     padding: 20px;
-    top: 0px;
-    left: 0px;
-    width: 1366px;
-    height: 660px;
+    max-width: 200px;
 }
 
-h1 {
-    position: absolute;
-    margin-left: 950px;
+.fila1 {
+    width: 100%;
+    background: #f8f8fa;
+    padding: 20px;
 }
 
-Input {
-  position: absolute;
-  background: white;
-  left: 900px;
+.fila2 {
+    width: 100%;
+    padding: 30px;
 }
- */
+.fila2 h1 {
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #000425;
+    opacity: 1;
+    padding-bottom: 20px;
+}
+.fila2 p {
+
+    padding-top: 20px;
+    padding: 20px;
+}
+
+.ingreso {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 40px;
+    top: 30px;
+
+}
+/*
+Input{
+    width: 40%;
+} */
+
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        width: 100%;
+        padding-top: 20px;
+        display: block;
+        margin: 10px;
+    }
+    .fila1 {
+        display: none;
+    }
+
+    .fila2 {
+        width: 100%;
+        padding: 0;
+        margin: auto;
+    }
+
+    .fila2 h1 {
+
+        text-align: center;
+    }
+    .ingreso {
+        top: 25px;
+
+    }
+}
+
 
 </style>

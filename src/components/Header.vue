@@ -20,9 +20,9 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  // position: fixed;
+  //position: fixed;
   width: 200px;
-  height: 100%;
+  height: 100vh;
   background: #5640ff;
 }
 

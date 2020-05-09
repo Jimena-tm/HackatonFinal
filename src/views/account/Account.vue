@@ -158,24 +158,24 @@ export default {
 
 <style lang="scss" scoped>
 h1{
-  margin-left:220px;
+  margin-left:50px;
   padding-top: 50px;
 }
 h2{
-  margin-left:220px;
+  margin-left:50px;
   margin-top: 30px;
   font-size: 2rem;
 }
 .form {
   margin-top: 20px;
-  margin-left: 250px;
+  margin-left: 50px;
   display: inline-grid;
   grid-template-columns: 500px 500px;
   grid-column-gap: 50px
 }
 .inp1 {
   margin-top: 20px;
-  margin-left: 250px;
-  width: 69%;
+  margin-left: 50px;
+  width: 95%;
 }
 </style>

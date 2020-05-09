@@ -1,11 +1,29 @@
 <template>
     <nav class="nave">
       <ul>
-        <router-link class="li" to="/">Inicio</router-link>
-        <router-link class="li" to="/messages">Mensajes</router-link>
-        <router-link class="li" to="/account">Mi cuenta</router-link>
+        <router-link class="li" to="/">
+          <div class="item">
+            <img src="@/assets/imagenes/icons/home.png" alt="" />
+            Inicio
+          </div>
+        </router-link>
+        <router-link class="li" to="/messages">
+          <div class="item">
+            <img src="@/assets/imagenes/icons/chat2.png" alt="" />
+            Mensajes
+          </div>
+        </router-link>
+        <router-link class="li" to="/account">
+          <div class="item">
+            <img src="@/assets/imagenes/icons/person2.png" alt="" />
+            Mi cuenta
+          </div>
+        </router-link>
       </ul>
-      <h2>Cerrar sesión</h2>
+      <div class="close">
+        <img src="@/assets/imagenes/icons/close2.png" alt="" />
+        <h2>Cerrar sesión</h2>
+      </div>
     </nav>
 </template>
 
@@ -17,6 +35,7 @@ export default {
 
 
 <style lang="scss" scoped>
+
 ul{
 margin-top: 20px;
 display: flex;
@@ -29,16 +48,26 @@ flex-direction: column;
     font-family: 'Poppins';
     font-size: 1.5rem;
     text-align: center;
-    color: #ffffff;
+    color: #BAB8CC;
     opacity: 1;
     text-decoration: none;
 }
 
 .li:hover {
     background: #8e80ff 0% 0% no-repeat padding-box;
+    color: white;
+}
+.item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-h2{
+.close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     font-family: 'Poppins';
     font-size: 1.5rem;
     text-align: center;
@@ -46,6 +75,14 @@ h2{
     opacity: 1;
     text-decoration: none;
     margin-top: 400px;
+}
+
+.close:hover {
+    background: #8e80ff 0% 0% no-repeat padding-box;
+}
+
+img {
+  padding-right: 7px;
 }
 
 </style>
