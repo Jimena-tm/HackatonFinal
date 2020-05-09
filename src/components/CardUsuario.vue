@@ -3,13 +3,12 @@
     <img
       id="FotoPerfil"
       :src="
-        user.profileUrl ?
-        user.profileUrl :
-        require(`../assets/account.png`)"
+        user.profileUrl ? user.profileUrl : require(`../assets/account.png`)
+      "
     />
     <div id="Nombres">
-      <p id="NombreUsuario">{{user.firstName+" "+user.lastName}}</p>
-      <p id="NombreCurso">{{user.course}}</p>
+      <p id="NombreUsuario">{{ user.name }}</p>
+      <p id="NombreCurso">{{ user.course }}</p>
     </div>
     <div id="Boton" v-on:click="$emit('openModal', user.id)">
       <img id="IconoVerMas" src="../assets/icons/ver-mas.svg" alt />
@@ -21,7 +20,7 @@
 <script>
 export default {
   name: "CardUsuario",
-  props: ["user"]
+  props: ["user"],
 };
 </script>
 
@@ -104,4 +103,3 @@ export default {
   }
 }
 </style>
-

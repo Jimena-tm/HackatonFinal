@@ -3,34 +3,46 @@
     <div id="sender">
       <img id="profilePic" src="https://picsum.photos/100/100" alt />
       <div id="text">
-        <p id="nameUser">{{message.subjects[1].name}}</p>
+        <p id="nameUser">{{ message.subjects[1].name }}</p>
         <p id="course">Front-End</p>
       </div>
     </div>
     <div id="conversation">
       <div
         :key="index"
-        v-for="(item,index) in message.content"
-        :class="item.sender==loggedInUser?'right':'left'"
+        v-for="(item, index) in message.content"
+        :class="item.sender == loggedInUser.username ? 'right' : 'left'"
       >
-        <div :class="item.sender==loggedInUser?'bubble b-right':'bubble b-left'">
-          <p>{{item.message}}</p>
+        <div
+          :class="
+            item.sender == loggedInUser.username
+              ? 'bubble b-right'
+              : 'bubble b-left'
+          "
+        >
+          <p>{{ item.message }}</p>
         </div>
-        <p
-          class="date"
-          v-if="index == 0"
-        >{{item.date.toLocaleDateString('es',{ month: 'short', day: 'numeric', year: 'numeric',hour:'2-digit',minute:'2-digit' })}}</p>
+        <p class="date" v-if="index == 0">
+          {{
+            new Date(item.date).toLocaleDateString("es", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+            })
+          }}
+        </p>
       </div>
     </div>
   </div>
 </template>
 
-
 <script>
 export default {
   name: "Chat",
   props: ["message", "loggedInUser"],
-  methods: {}
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>

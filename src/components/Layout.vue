@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div id="layout">
     <Header />
     <Main>
       <router-view></router-view>
@@ -8,18 +8,20 @@
 </template>
 
 <script>
-import Header from './Header.vue';
-import Main from './Main.vue';
+import Header from "./Header.vue";
+import Main from "./Main.vue";
 
 export default {
-  name: 'Layout',
+  name: "Layout",
   components: {
-      Header,
-      Main,
-    },
+    Header,
+    Main,
+  },
 };
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+#layout {
+  display: flex;
+}
 </style>
