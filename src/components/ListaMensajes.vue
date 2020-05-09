@@ -4,23 +4,31 @@
     <div
       class="itemMessage"
       :key="message.messageId"
-      @click="$emit('openMessage',message.messageId)"
+      @click="$emit('openMessage', message.messageId)"
       v-for="message in messages"
     >
       <img
         class="profilePic"
         :src="
-        message.subjects[1].profileUrl ?
-        message.subjects[1].profileUrl :
-        require(`../assets/account.png`)"
+          message.subjects[1].profileUrl
+            ? message.subjects[1].profileUrl
+            : require(`../assets/account.png`)
+        "
       />
       <div class="content">
-        <p class="sender">{{message.subjects[1].name}}</p>
+        <p class="sender">{{ message.subjects[1].name }}</p>
         <div class="text">
-          <p class="msg">{{message.content[0].message.substring(0,37)+"..."}}</p>
-          <p
-            class="date"
-          >{{message.content[0].date.toLocaleDateString('es',{ month: 'short', day: 'numeric' })}}</p>
+          <p class="msg">
+            {{ message.content[0].message.substring(0, 37) + "..." }}
+          </p>
+          <p class="date">
+            {{
+              new Date(message.content[0].date).toLocaleDateString("es", {
+                month: "short",
+                day: "numeric",
+              })
+            }}
+          </p>
         </div>
       </div>
     </div>
@@ -33,7 +41,7 @@ export default {
   name: "ListaMensajes",
   components: { Buscador },
   props: ["messages"],
-  methods: {}
+  methods: {},
 };
 </script>
 
