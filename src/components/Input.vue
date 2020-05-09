@@ -7,6 +7,7 @@
         :type="type"
         :placeholder="placeholder"
         :required="required"
+        :disabled="disabled"
         class="input"
         />
     <!-- <form class="regist" action="">
@@ -46,6 +47,7 @@ export default {
         required: {
             type: Boolean,
         },
+        disabled: Boolean,
     },
     data () {
         return {
