@@ -105,6 +105,30 @@
       "specialization": "Ux Desing",
       "firstTime": true,
       "id": 8
+    },
+    {
+      "name": "yadira Torres",
+      "username": "ytorres",
+      "password": "1234567",
+      "age": "25",
+      "phone": "999888111",
+      "place": "Lima",
+      "specialization": "Ux",
+      "firstTime": true,
+      "id": 9
+    },
+    {
+      "name": "Goya",
+      "username": "Torres",
+      "password": "1234567",
+      "age": "5",
+      "phone": "123888999",
+      "place": "Lima",
+      "specialization": "Ux Deesign",
+      "firstTime": true,
+      "id": 10,
+      "profile": "Soy un Ux designer junior",
+      "email": "goyatorres@gmail.com"
     }
   ],
   "messages": [
