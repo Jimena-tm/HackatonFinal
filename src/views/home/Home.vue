@@ -7,12 +7,8 @@
       v-on:openModal="openModal($event)"
     />
     <div id="noUsersView" v-if="!renderCards">No hay nadie registrado aun.</div>
-    <FirstTime v-if="firstTime" />
-    <Modal
-      v-if="modalConfig.open"
-      v-bind:user="modalConfig.user"
-      v-on:closeModal="closeModal()"
-    />
+    <!-- <FirstTime v-if="firstTime" /> -->
+    <Modal v-if="modalConfig.open" v-bind:user="modalConfig.user" v-on:closeModal="closeModal()" />
   </div>
 </template>
 
@@ -28,12 +24,20 @@ export default {
     Cards,
     Appbar,
     FirstTime,
-    Modal,
+    Modal
+  },
+  watch: {
+    user(value) {
+      console.log(value);
+    }
   },
   computed: mapState({
+    user(state) {
+      return state.authStore.user;
+    },
     users(state) {
       return state.usersStore.users;
-    },
+    }
   }),
   created() {
     this.fetchUsers();
@@ -44,30 +48,31 @@ export default {
       renderCards: true,
       modalConfig: {
         open: false,
-        user: null,
-      },
+        user: null
+      }
     };
   },
   methods: {
     ...mapMutations({
-      fetchUsers: "usersStore/setUsers",
+      fetchUsers: "usersStore/setUsers"
     }),
     openModal(id) {
       this.modalConfig = {
         open: true,
-        user: this.users.filter((user) => user.id === id)[0],
+        user: this.users.filter(user => user.id === id)[0]
       };
     },
     closeModal() {
       this.modalConfig = { open: false, user: null };
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 #view-init {
   display: flex;
+  padding: 30px;
   flex-direction: column;
   justify-content: center;
   align-items: center;

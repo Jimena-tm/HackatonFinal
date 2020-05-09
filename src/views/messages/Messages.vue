@@ -47,9 +47,6 @@ export default {
 
 <style lang="scss" scoped>
 #messages {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   display: flex;
   #listaMensajes {
     #noMessages {
@@ -61,6 +58,9 @@ export default {
         font-size: 40px;
       }
     }
+  }
+  > :nth-child(2) {
+    flex-grow: 1;
   }
 }
 </style>

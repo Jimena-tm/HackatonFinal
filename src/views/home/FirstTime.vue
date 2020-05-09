@@ -23,13 +23,68 @@
         <label for="size_1">Correo electronico</label>
         <input type="text" name="size" id="size_1" placeholder="Escriba aqui..." />
       </p>
+      <Button :fullWidth="true" type="primary">Registrar</Button>
     </form>
   </div>
 </template>
 
 <script>
+import Button from "../../components/Button";
+import { SET_USER } from "@/views/auth/store/mutatios-type";
+import { mapActions, mapState, mapMutations } from "vuex";
 export default {
-  name: "FirstTime"
+  name: "FirstTime",
+  components: {
+    Button
+  },
+  data() {
+    return {
+      profile: "",
+      phone: "",
+      place: "",
+      specialization: "",
+      email: "",
+      id: "",
+      firsTime: true
+    };
+  },
+  computed: {
+    ...mapState({
+      user(state) {
+        console.log("state.authStore.user", state.authStore.user);
+        this.phone = state.authStore.user.phone;
+        this.place = state.authStore.user.place;
+        this.specialization = state.authStore.user.specialization;
+        this.id = state.authStore.user.id;
+        this.firsTime = state.authStore.user.firsTime;
+      }
+    })
+  },
+  watch: {
+    user(user) {
+      console.log("user", user);
+    }
+  },
+  methods: {
+    ...mapMutations({
+      setUser: `authStore/${SET_USER}`
+    }),
+    handleSubmit() {
+      fetch(`http://localhost:3000/users/${this.id}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+          firsTime: false,
+          profile: this.profile,
+          email: this.email
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+        .then(response => response.json())
+        .then(user => this.setUser(user));
+    }
+  }
 };
 </script>
 
@@ -84,6 +139,22 @@ export default {
           height: 50px;
         }
       }
+    }
+    #button {
+      width: 300px;
+      height: 50px;
+      border-radius: 25px;
+      opacity: 1;
+      text-decoration: none;
+      font-family: "Poppins";
+      cursor: pointer;
+      text-align: center;
+      background: #5640ff 0% 0% no-repeat padding-box;
+      border: none;
+      color: #ffffff;
+      font-family: Poppins;
+      font-weight: bold;
+      font-size: 1.5rem;
     }
   }
 }

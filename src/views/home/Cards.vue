@@ -1,7 +1,10 @@
 <template>
   <div id="cards">
     <div v-bind:key="user.id" v-for="user in users">
-      <CardUsuario v-bind:user="user" v-on:openModal="$emit('openModal',$event)" />
+      <CardUsuario
+        v-bind:user="user"
+        v-on:openModal="$emit('openModal', $event)"
+      />
     </div>
   </div>
 </template>
@@ -11,8 +14,8 @@ export default {
   name: "Cards",
   props: ["users"],
   components: {
-    CardUsuario
-  }
+    CardUsuario,
+  },
 };
 </script>
 
@@ -24,19 +27,19 @@ export default {
   row-gap: 10px;
   grid-template-columns: 1fr;
 
-  @media (min-width: 450px) {
+  @media (min-width: 700px) {
     grid-template-columns: 1fr 1fr;
     row-gap: 39px;
   }
 
-  @media (min-width: 650px) {
+  @media (min-width: 850px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  @media (min-width: 850px) {
+  @media (min-width: 1100px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  @media (min-width: 1100px) {
+  @media (min-width: 1300px) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }

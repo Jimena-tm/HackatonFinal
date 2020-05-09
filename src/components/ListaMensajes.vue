@@ -47,8 +47,10 @@ export default {
 
 <style lang="scss" scoped>
 #listaMensajes {
-  width: 408px;
   border: 2px solid #f8f8fa;
+  > :nth-child(1) {
+    margin: 30px;
+  }
   .itemMessage {
     display: flex;
     align-items: center;

@@ -23,5 +23,8 @@ export default {
 <style lang="scss" scoped>
 #layout {
   display: flex;
+  > :nth-child(2) {
+    flex-grow: 1;
+  }
 }
 </style>
