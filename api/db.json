@@ -8,8 +8,10 @@
       "phone": "999888777",
       "place": "Lima",
       "specialization": "FrontEnd",
-      "firstTime": true,
-      "id": 1
+      "firstTime": false,
+      "id": 1,
+      "profile": "Soy desarrolladora front-end",
+      "email": "mnorieha@gmail.com"
     },
     {
       "id": 1,
