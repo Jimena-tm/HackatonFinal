@@ -50,7 +50,7 @@
         </div>
       </div>
       <Modal v-if="modalConfig.open" v-bind:user="modalConfig.user" v-on:closeModal="closeModal()" />
-      <div id="noUsersView" v-if="!users">No hay nadie registrado aun.</div>
+      <!--<div id="noUsersView" v-if="!users">No hay nadie registrado aun.</div>-->
     </div>
   </div>
 </template>

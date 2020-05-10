@@ -1,10 +1,10 @@
 <template>
   <div id="messages">
     <div id="listaMensajes">
-      <div v-if="!messages" id="noMessages">
+      <!--<div v-if="!messages" id="noMessages">
         No tienes mensajes aun,
         <br />inicia una conversacion
-      </div>
+      </div>-->
       <ListaMensajes id="listaMensajes" :messages="messages" @openMessage="openMessage($event)" />
     </div>
     <div id="chat" v-if="selectedMessage">
