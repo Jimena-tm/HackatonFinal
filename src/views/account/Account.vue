@@ -178,4 +178,24 @@ h2{
   margin-left: 50px;
   width: 95%;
 }
+
+@media screen and (max-width: 768px) {
+    .form {
+        width: 100%;
+        padding-top: 20px;
+        display: block;
+        margin: 10px;
+    }
+
+    .inp1 {
+      width: 100%;
+        padding-top: 20px;
+        display: block;
+        margin: 10px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+}
+
 </style>

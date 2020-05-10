@@ -47,10 +47,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 #chat {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   color: #000425;
+  height: 100%;
   #sender {
     border: 2px solid #f8f8fa;
     display: flex;

@@ -40,9 +40,14 @@ const routes = [
       },
       {
         path: "/",
+        name: "FirstTime",
+        component: () => import("../views/home/FirstTime.vue"),
+      },
+      /* {
+        path: "/",
         name: "Home",
         component: () => import("../views/home/Home.vue"),
-      },
+      }, */
     ],
     beforeEnter: (to, from, next) => {
       if (store.state.authStore.isLogin) next();

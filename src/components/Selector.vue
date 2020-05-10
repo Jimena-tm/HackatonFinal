@@ -1,13 +1,14 @@
 <template>
-  <div :id="data.title+'selector'" class="selector roundBorder">
-    <button id="button" @click="open()">{{data.title}}</button>
-    <div :id="data.title+'dropdown'" class="dropdown show">
+  <div :id="data.title + 'selector'" class="selector roundBorder">
+    <button id="button" @click="open()">{{ data.title }}</button>
+    <div :id="data.title + 'dropdown'" class="dropdown show">
       <a
         class="option"
         v-for="option in data.options"
         v-bind:value="option"
         v-bind:key="option"
-      >{{ option }}</a>
+        >{{ option }}</a
+      >
     </div>
   </div>
 </template>
@@ -24,8 +25,8 @@ export default {
       document
         .getElementById(this.data.title + "dropdown")
         .classList.toggle("show");
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -39,17 +40,16 @@ export default {
   border-style: solid;
   border-width: 1px 1px 0 1px;
   position: relative;
-  width: 300px;
-  position: relative;
   display: inline-block;
   border-radius: 25px 25px 0 0;
   #button {
     border: none;
+    padding: 0 15px 0 15px;
     background: none;
     font-family: Poppins;
     font-size: 14px;
+    width: 100%;
     height: 50px;
-    width: 300px;
     font-weight: bold;
     cursor: pointer;
   }
@@ -61,8 +61,7 @@ export default {
     position: absolute;
     background-color: #fff;
     border-radius: 0 0 25px 25px;
-    width: 300px;
-    min-width: 160px;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     cursor: pointer;

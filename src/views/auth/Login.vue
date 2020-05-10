@@ -1,24 +1,35 @@
 <template>
   <div class="view-login">
-    <div class="image">
+    <div class="logo">
+        <img src="@/assets/imagenes/logotipo.png" alt="">
+    </div>
+
+<div class="contenedor">
+    <div class="fila1">
       <img src="@/assets/imagenes/manbook.png" alt="" />
     </div>
-    <div class="form">
+
+    <div class="fila2">
       <h1>Iniciar Sesión</h1>
       <form @submit.prevent="handleSubmit" action="">
-        <Input @input="(value) => (username = value)"
-        placeholder="Usuario"
-        label="Usuario" />
-        <br />
-        <Input
-          @input="(value) => (password = value)"
-          type="password"
-          placeholder="Contraseña"
-          label="Contraseña"
-        />
-        <br />
+          <Input
+          @input="(value) => (username = value)"
+          placeholder="Usuario"
+          label="Usuario"
+          required
+          />
+          <br />
+            <Input
+            @input="(value) => (password = value)"
+            type="password"
+            placeholder="Contraseña"
+            label="Contraseña"
+            required
+          />
+          <br />
         <Button type="secondary">Ingresar</Button>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 </template>
@@ -73,23 +84,92 @@ export default {
 
 <style lang="scss" scoped>
 .view-login {
-  display: flex;
   height: 100vh;
+}
 
-  .image {
-    width: 60%;
-  };
-  .form {
-    width: 40%;
-    padding: 40px;
-    align-self: center;
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
-  h1 {
-    font-family: 'Poppins';
+.contenedor {
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+img {
+    padding-top: 180px;
+    width: 100%;
+}
+.logo {
+    background: #5640FF;
+}
+.logo img {
+    display: block;
+    padding: 20px;
+    max-width: 200px;
+}
+
+.fila1 {
+    width: 100%;
+    background: #f8f8fa;
+    padding: 20px;
+}
+
+.fila2 {
+    width: 100%;
+    padding: 30px;
+}
+.fila2 h1 {
     text-align: center;
-    margin-bottom: 40px;
-  }
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #000425;
+    opacity: 1;
+    padding-bottom: 20px;
+}
+.fila2 p {
+
+    padding-top: 20px;
+    padding: 20px;
+}
+
+.ingreso {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 40px;
+    top: 30px;
+
+}
+/*
+Input{
+    width: 40%;
+} */
+
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        width: 100%;
+        padding-top: 20px;
+        display: block;
+        margin: 10px;
+    }
+    .fila1 {
+        display: none;
+    }
+
+    .fila2 {
+        width: 100%;
+        padding: 0;
+        margin: auto;
+    }
+
+    .fila2 h1 {
+
+        text-align: center;
+    }
+    .ingreso {
+        top: 25px;
+
+    }
 }
 
 </style>

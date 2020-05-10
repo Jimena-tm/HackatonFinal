@@ -37,7 +37,7 @@ export default {
   align-items: center;
   padding: 0 20px 0 50px;
   justify-content: space-between;
-  @media (min-width: 450px) {
+  @media (min-width: 700px) {
     padding: 70px 0 15px 0;
     flex-direction: column;
     margin-top: 50px;
@@ -51,8 +51,8 @@ export default {
     height: 60px;
     position: absolute;
     left: -30px;
-    @media (min-width: 450px) {
-      border-radius: 50%;
+    border-radius: 50%;
+    @media (min-width: 700px) {
       width: 100px;
       height: 100px;
       left: 45px;
@@ -77,7 +77,7 @@ export default {
     }
   }
   #Boton {
-    @media (min-width: 450px) {
+    @media (min-width: 700px) {
       border: 1px;
       display: flex;
       font-size: 14px;
@@ -90,12 +90,12 @@ export default {
     #TextoBoton {
       display: none;
       color: #5640ff;
-      @media (min-width: 450px) {
+      @media (min-width: 700px) {
         display: block;
       }
     }
     #IconoVerMas {
-      @media (min-width: 450px) {
+      @media (min-width: 700px) {
         width: 24px;
         margin-right: 5px;
       }

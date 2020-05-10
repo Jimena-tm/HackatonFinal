@@ -12,19 +12,6 @@
       "id": 1
     },
     {
-      "name": "Jimena Torres",
-      "username": "jtorresm",
-      "password": "1234567",
-      "age": "27",
-      "phone": "948299999",
-      "place": "Lima",
-      "specialization": "FrontEnd",
-      "firstTime": true,
-      "id": 2,
-      "profile": "Soy front end con interés en back-end",
-      "email": "jtorresm@pachaqtec.edu.pe"
-    },
-    {
       "id": 1,
       "name": "Mario Gonzales",
       "course": "Backend",
@@ -85,17 +72,6 @@
       "profileUrl": null
     },
     {
-      "name": "Javier Cardenas",
-      "username": "jcardenas",
-      "password": "1234567",
-      "age": "24",
-      "phone": "888999222",
-      "place": "Lima",
-      "specialization": "BackEnd",
-      "firstTime": true,
-      "id": 7
-    },
-    {
       "name": "Paloma Torres",
       "username": "ptorresm",
       "password": "1234567",
@@ -103,32 +79,10 @@
       "phone": "999333222",
       "place": "Lima",
       "specialization": "Ux Desing",
-      "firstTime": true,
-      "id": 8
-    },
-    {
-      "name": "yadira Torres",
-      "username": "ytorres",
-      "password": "1234567",
-      "age": "25",
-      "phone": "999888111",
-      "place": "Lima",
-      "specialization": "Ux",
-      "firstTime": true,
-      "id": 9
-    },
-    {
-      "name": "Goya",
-      "username": "Torres",
-      "password": "1234567",
-      "age": "5",
-      "phone": "123888999",
-      "place": "Lima",
-      "specialization": "Ux Deesign",
-      "firstTime": true,
-      "id": 10,
-      "profile": "Soy un Ux designer junior",
-      "email": "goyatorres@gmail.com"
+      "firstTime": false,
+      "id": 8,
+      "profile": "Diseñadora Ux  senior",
+      "email": "paloma@gmail.com"
     }
   ],
   "messages": [

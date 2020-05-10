@@ -10,7 +10,6 @@
 <script>
 import Header from "./Header.vue";
 import Main from "./Main.vue";
-
 export default {
   name: "Layout",
   components: {
@@ -23,5 +22,8 @@ export default {
 <style lang="scss" scoped>
 #layout {
   display: flex;
+  > :nth-child(2) {
+    flex-grow: 1;
+  }
 }
 </style>
