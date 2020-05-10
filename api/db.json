@@ -85,6 +85,19 @@
       "id": 8,
       "profile": "Diseñadora Ux  senior",
       "email": "paloma@gmail.com"
+    },
+    {
+      "name": "Chihiro",
+      "username": "Chihiro",
+      "password": "1234567",
+      "age": "4",
+      "phone": "999888777",
+      "place": "Chiclayo",
+      "specialization": "FrontEnd",
+      "firstTime": false,
+      "id": 9,
+      "profile": "soy un gata chiclayano",
+      "email": "chihiro@gmail.com"
     }
   ],
   "messages": [
