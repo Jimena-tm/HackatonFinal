@@ -2,22 +2,17 @@
   <div id="modal">
     <div id="label">
       <p>Perfil</p>
-      <img
-        id="closeIcon"
-        src="../assets/icons/close.svg"
-        v-on:click="$emit('closeModal')"
-        alt
-      />
+      <img id="closeIcon" src="../assets/icons/close.svg" v-on:click="$emit('closeModal')" alt />
     </div>
     <p id="name">{{ user.name }}</p>
     <p id="profile">{{ user.profile }}</p>
     <div class="listItem">
       <img src="../assets/icons/book.svg" alt />
-      {{ user.course }}
+      {{ user.specialization }}
     </div>
     <div class="listItem">
       <img src="../assets/icons/place.svg" alt />
-      <p>{{ user.campus }}</p>
+      <p>{{ user.place }}</p>
     </div>
     <div class="listItem">
       <img src="../assets/icons/phone.svg" alt />
@@ -34,7 +29,7 @@
 <script>
 export default {
   name: "Modal",
-  props: ["user"],
+  props: ["user"]
 };
 </script>
 
@@ -47,6 +42,9 @@ export default {
   background: #fff;
   z-index: 1;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   border: 1px solid #f3f3f3;
   border-radius: 25px;
   padding: 0 20px 17px 20px;

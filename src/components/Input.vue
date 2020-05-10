@@ -1,15 +1,15 @@
 <template>
-    <div class="wrap-input">
-        <label v-if="label">{{ label }}</label>
-        <input
-        :value="value"
-        @input="updateInput"
-        :type="type"
-        :placeholder="placeholder"
-        :required="required"
-        :disabled="disabled"
-        class="input"
-        />
+  <div class="wrap-input">
+    <label v-if="label">{{ label }}</label>
+    <input
+      :value="value"
+      @input="updateInput"
+      :type="type"
+      :placeholder="placeholder"
+      :required="required"
+      :disabled="disabled"
+      class="input"
+    />
     <!-- <form class="regist" action="">
             <div class="datos">
                 <label for="">Nombres </label><br>
@@ -29,61 +29,63 @@
                 <br><br>
                 <button>Ingresar</button>
             </div>
-    </form> -->
-    </div>
+    </form>-->
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'Input',
-    props: {
-        value: [String, Number],
-        placeholder: String,
-        label: String,
-        type: {
-            type: String,
-            default: 'text'
-        },
-        required: {
-            type: Boolean,
-        },
-        disabled: Boolean,
+  name: "Input",
+  props: {
+    value: [String, Number],
+    placeholder: String,
+    label: String,
+    type: {
+      type: String,
+      default: "text"
     },
-    data () {
-        return {
-            inpValue: '',
-        };
+    required: {
+      type: Boolean
     },
-    methods: {
-        updateInput(value) {
-            this.$emit('input', value.target.value);
-        },
-    },
+    disabled: Boolean,
+    eye: String
+  },
+  data() {
+    return {
+      inpValue: ""
+    };
+  },
+  methods: {
+    updateInput(value) {
+      this.$emit("input", value.target.value);
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.wrap-input{
-    margin-bottom: 20px;
+.wrap-input {
+  margin-bottom: 20px;
 
-    label {
-        display: block;
-        margin-bottom: 8px;
-        color: #BAB8CC;
-        text-transform: uppercase;
-    }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #bab8cc;
+    text-transform: uppercase;
+  }
 }
-    .input {
-    border: 1px solid #bab8cc;
-    padding: 18px 10px;
-    border-radius: 5px;
-    width: 100%;
-    color: #4e4e4e;
+.input {
+  border: 1px solid #bab8cc;
+  height: 50px;
+  padding: 18px 10px;
+  border-radius: 5px;
+  width: 100%;
+  color: #4e4e4e;
 
-    &:focus {
-        outline: none;
-        border-color: #5640FF;
-    }
+  &:focus {
+    outline: none;
+    border-color: #5640ff;
+  }
 }
 
 /* .regist .datos {

@@ -29,12 +29,12 @@ export default {
       },
       selectOrderData: {
         title: "Ordenar por:",
-        options: ["A-Z", "Z-A"],
+        options: ["A-Z", "Z-A"]
       },
       selectFilter: {
         title: "Filtrar",
-        options: ["Programa de Especializacion", "Ordenar por"],
-      },
+        options: ["Programa de Especializacion", "Ordenar por"]
+      }
     };
   },
 };
@@ -43,6 +43,7 @@ export default {
 #Appbar {
   height: 50px;
   display: flex;
+  justify-content: center;
   * {
     margin-right: 10px;
   }

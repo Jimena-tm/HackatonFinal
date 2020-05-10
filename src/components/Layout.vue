@@ -1,6 +1,7 @@
 <template>
   <div id="layout">
     <Header />
+    <div id="volumen" />
     <Main>
       <router-view></router-view>
     </Main>
@@ -14,15 +15,21 @@ export default {
   name: "Layout",
   components: {
     Header,
-    Main,
-  },
+    Main
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 #layout {
   display: flex;
-  > :nth-child(2) {
+  #volumen {
+    width: 200px;
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+  > :nth-last-child(1) {
     flex-grow: 1;
   }
 }

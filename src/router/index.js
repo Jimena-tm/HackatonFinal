@@ -1,6 +1,6 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import store from '@/store';
+import Vue from "vue";
+import VueRouter from "vue-router";
+import store from "@/store";
 
 Vue.use(VueRouter);
 
@@ -11,14 +11,14 @@ const routes = [
     component: () => import("../views/landing/Landing.vue"),
   },
   {
-    path: '/login',
-    name: 'Login',
-    component: () => import('../views/auth/Login.vue'),
+    path: "/login",
+    name: "Login",
+    component: () => import("../views/auth/Login.vue"),
   },
   {
-    path: '/register',
-    name: 'Register',
-    component: () => import('../views/auth/Register.vue'),
+    path: "/register",
+    name: "Register",
+    component: () => import("../views/auth/Register.vue"),
   },
   {
     path: "/",
@@ -51,7 +51,7 @@ const routes = [
     ],
     beforeEnter: (to, from, next) => {
       if (store.state.authStore.isLogin) next();
-      next({ name: 'Login' });
+      next({ name: "Login" });
     },
   },
 ];
