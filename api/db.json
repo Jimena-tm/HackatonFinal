@@ -8,90 +8,83 @@
       "phone": "999888777",
       "place": "Lima",
       "specialization": "FrontEnd",
-      "firstTime": true,
-      "id": 1
+      "firstTime": false,
+      "id": 1,
+      "profile": "Profile",
+      "email": "mnoriega@mail.com"
     },
     {
-      "name": "Jimena Torres",
-      "username": "jtorresm",
-      "password": "1234567",
-      "age": "27",
-      "phone": "111222333",
-      "place": "Lima",
-      "specialization": "FrontEnd",
-      "firstTime": true,
-      "id": 2
-    },
-    {
-      "id": 3,
+      "id": 1,
       "name": "Mario Gonzales",
-      "course": "Backend",
+      "specialization": "Backend",
       "profile": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ut neque. Tenetur dignissimos quisquam praesentium minima error, debitis consequatur! Velit facere id nisi repellat? Dolore nesciunt aut sit provident necessitatibus.",
-      "campus": "Sede San Juan de Miraflores",
+      "place": "Sede San Juan de Miraflores",
       "phone": "977456789",
-      "email": "mario@asd.com",
+      "email": "mario@mail.com",
       "profileUrl": "https://picsum.photos/100/100"
     },
     {
-      "id": 4,
+      "id": 2,
       "name": "Yuri Sacatoma",
-      "course": "FrontEnd",
+      "specialization": "FrontEnd",
       "profile": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ut neque. Tenetur dignissimos quisquam praesentium minima error, debitis consequatur! Velit facere id nisi repellat? Dolore nesciunt aut sit provident necessitatibus.",
-      "campus": "Sede San Juan de Miraflores",
+      "place": "Sede San Juan de Miraflores",
       "phone": "977456789",
-      "email": "yuri@asd.com",
+      "email": "yuri@mail.com",
       "profileUrl": null
     },
     {
-      "id": 5,
+      "id": 3,
       "name": " Luis Fernandez",
-      "course": "Diseno UX",
+      "specialization": "Diseno UX",
       "profile": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ut neque. Tenetur dignissimos quisquam praesentium minima error, debitis consequatur! Velit facere id nisi repellat? Dolore nesciunt aut sit provident necessitatibus.",
-      "campus": "Sede San Juan de Miraflores",
+      "place": "Sede San Juan de Miraflores",
       "phone": "977456789",
-      "email": "luis@asd.com",
+      "email": "luis@mail.com",
+      "profileUrl": null
+    },
+    {
+      "id": 4,
+      "name": "Camila Cordoba",
+      "specialization": "Desarrollo de apps",
+      "profile": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ut neque. Tenetur dignissimos quisquam praesentium minima error, debitis consequatur! Velit facere id nisi repellat? Dolore nesciunt aut sit provident necessitatibus.",
+      "place": "Sede San Juan de Miraflores",
+      "phone": "977456789",
+      "email": "camila@mail.com",
+      "profileUrl": "https://picsum.photos/100/100"
+    },
+    {
+      "id": 5,
+      "name": "Franco Ponce",
+      "specialization": "Desarrollo de Videojuegos en Unity",
+      "profile": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ut neque. Tenetur dignissimos quisquam praesentium minima error, debitis consequatur! Velit facere id nisi repellat? Dolore nesciunt aut sit provident necessitatibus.",
+      "place": "Sede San Juan de Miraflores",
+      "phone": "977456789",
+      "email": "franco@mail.com",
       "profileUrl": null
     },
     {
       "id": 6,
-      "name": "Camila Cordoba",
-      "course": "Desarrollo de apps",
-      "profile": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ut neque. Tenetur dignissimos quisquam praesentium minima error, debitis consequatur! Velit facere id nisi repellat? Dolore nesciunt aut sit provident necessitatibus.",
-      "campus": "Sede San Juan de Miraflores",
-      "phone": "977456789",
-      "email": "camila@asd.com",
-      "profileUrl": "https://picsum.photos/100/100"
-    },
-    {
-      "id": 7,
-      "name": "Franco Ponce",
-      "course": "Desarrollo de Videojuegos en Unity",
-      "profile": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ut neque. Tenetur dignissimos quisquam praesentium minima error, debitis consequatur! Velit facere id nisi repellat? Dolore nesciunt aut sit provident necessitatibus.",
-      "campus": "Sede San Juan de Miraflores",
-      "phone": "977456789",
-      "email": "franco@asd.com",
-      "profileUrl": null
-    },
-    {
-      "id": 8,
       "name": "GabrielaVela",
-      "course": "BackEnd",
+      "specialization": "BackEnd",
       "profile": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ut neque. Tenetur dignissimos quisquam praesentium minima error, debitis consequatur! Velit facere id nisi repellat? Dolore nesciunt aut sit provident necessitatibus.",
-      "campus": "Sede San Juan de Miraflores",
+      "place": "Sede San Juan de Miraflores",
       "phone": "977456789",
-      "email": "gabriela@asd.com",
+      "email": "gabriela@mail.com",
       "profileUrl": null
     },
     {
-      "name": "asd",
-      "username": "asd",
-      "password": "asd",
-      "age": "asd",
-      "phone": "asd",
-      "place": "asd",
-      "specialization": "asd",
-      "firstTime": true,
-      "id": 9
+      "name": "Paloma Torres",
+      "username": "ptorresm",
+      "password": "1234567",
+      "age": "25",
+      "phone": "999333222",
+      "place": "Lima",
+      "specialization": "Ux Desing",
+      "firstTime": false,
+      "id": 8,
+      "profile": "Diseñadora Ux  senior",
+      "email": "paloma@gmail.com"
     }
   ],
   "messages": [
@@ -134,7 +127,7 @@
         {
           "dialogId": 5,
           "sender": "Camila Cordova",
-          "message": "exercitationem asdasd asdsads asdsadsds adsasdsd asdasdsd asdsadasdad asdsdasdas veniam sapiente, nam optio nobis modi officia necessitatibus",
+          "message": "exercitationem  asdsads asdsadsds adsasdsd asdasdsd asdsadasdad asdsdasdas veniam sapiente, nam optio nobis modi officia necessitatibus",
           "date": "Fri May 08 2020 11:09:55 GMT-0500 (Peru Standard Time)"
         },
         {

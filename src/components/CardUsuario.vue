@@ -8,7 +8,7 @@
     />
     <div id="Nombres">
       <p id="NombreUsuario">{{ user.name }}</p>
-      <p id="NombreCurso">{{ user.course }}</p>
+      <p id="NombreCurso">{{ user.specialization }}</p>
     </div>
     <div id="Boton" v-on:click="$emit('openModal', user.id)">
       <img id="IconoVerMas" src="../assets/icons/ver-mas.svg" alt />
@@ -20,7 +20,7 @@
 <script>
 export default {
   name: "CardUsuario",
-  props: ["user"],
+  props: ["user"]
 };
 </script>
 

@@ -19,5 +19,8 @@ export default {
         return message.messageId === payload;
       })[0];
     },
+    setSelectedMessageNull(state, payload) {
+      state.selectedMessage = null;
+    },
   },
 };

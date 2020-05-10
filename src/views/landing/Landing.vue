@@ -1,29 +1,27 @@
 <template>
   <div class="view-landing">
-    <div id="logo">
-      <img src="@/assets/imagenes/logotipo.png" alt="" />
-    </div>
-
-    <div class="caption">
-      <div class="contenedor">
-        <h1>¡Explota todo tu <br> potencial tecnológico!</h1>
-        <h3>Con nuestros programas de especialización</h3>
-      </div>
-    </div>
-
-    <section class="botones">
-        <div class="contenedor">
-          <div class="btn" >
-            <Button v-on:onclick="register" type="primary">Registrate</Button>
-            <Button v-on:onclick="sigin" type="ghost">Ingresar</Button>
-          </div>
-
-          <div class="laptop">
-            <img src="@/assets/imagenes/laptop-small.png" alt="">
-          </div>
-
+    <div class="wrapper">
+        <div class="logo">
+            <img src="@/assets/imagenes/logotipo.png"  alt="" />
         </div>
-    </section>
+        <div class="banner">
+          <div class="text-main">
+            <h1>
+                ¡Explota todo tu<br />
+                potencial teconológico!
+            </h1>
+
+            <h3>Con nuestros programas de especialización</h3>
+          </div>
+            <div class="laptop">
+              <img src="@/assets/imagenes/laptop-small.png"  alt="" />
+            </div>
+            <div class="botones">
+              <Button v-on:onclick="register" type="primary">Registrate</Button>
+              <Button v-on:onclick="sigin" type="ghost">Ingresar</Button>
+            </div>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -49,140 +47,129 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .view-landing {
-background: transparent linear-gradient(180deg, #5640ff 0%, #586fff 100%) 0%
+  height: 100vh;
+  background: #5640ff;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: transparent linear-gradient(180deg, #5640ff 0%, #586fff 100%) 0%
         0% no-repeat padding-box;
-    height: 100vh;
-    max-width: 100%;
-}
-
-section {
-    width: 100%;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-.contenedor {
-    width: 98%;
-    margin: auto;
 }
 
 img {
-    margin-top: 40px;
-    max-width: 100%;
+  max-width: 100%;
 }
 
-#logo {
+/*LOGOOOO*/
+.wrapper .logo img {
+  display: block;
+  width: 200px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+/*TEXTO PRINCIPAL*/
+.text-main {
     display: block;
-    max-width: 200px;
-    margin: 20px;
-    padding-left: 20px;
-}
-
-.caption {
-    width: 100%;
-    margin: 10px;
     position: relative;
-    height: 40vh;
+    top: 120px;
+    left: 2%
 }
 
-.caption .contenedor {
-    display: block;
-    position: absolute;
-    top: 80px;
+.text-main h1 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #ffff;
+    font-size: 70px;
     left: 0;
-    margin: 20px;
-    padding-left: 20px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
-.caption .contenedor h1 {
-    font-family: 'Poppins';
-    text-align: left;
-    font-size: 80px;
-    letter-spacing: 0px;
-    color: #ffffff;
-    opacity: 1;
+.text-main h3 {
+    color: #ffff;
+    font-size: 20px;
+    left: 0;
+    padding-top: 40px;
 }
-
-.caption .contenedor h3 {
-    font-family: 'Poppins';
-    font-weight: 50;
-    padding-top: 50px;
-    text-align: left;
-    font-size: 30px;
-    letter-spacing: 0px;
-    color: #ffffff;
-    opacity: 1;
-}
-
-/*BOTONES LANDING*/
-.botones {
-    height: 50vh;
-    width: 100%;
-    margin: 10px;
+/*SECTION LAPTOP Y BTN*/
+.banner {
+    display: block;
     position: relative;
 }
 
-.botones .contenedor .btn {
-    display: flex;
-}
-
-.botones .contenedor .btn Button {
-    margin-right: 100px;
-}
-
-.botones .contenedor .btn Button:nth-child(odd) {
-    margin: 20px;
-    margin-top: 90px;
-    text-align: center;
-    //line-height: 45px;
-    /* width: 300px;
-    height: 50px; */
-    //background: #ff1558 0% 0% no-repeat padding-box;
-    /* border-radius: 25px;
-    opacity: 1;
-    text-decoration: none; */
-    //color: #ffffff;
-}
-
-.botones .contenedor .btn Button:nth-child(even) {
-    margin: 20px;
-    margin-top: 90px;
-    text-align: center;
-    //line-height: 45px;
-    /* width: 300px;
-    height: 50px; */
-    //background: transparent 0% 0% no-repeat padding-box;
-    /* border-radius: 25px;
-    opacity: 1;
-    text-decoration: none; */
-    //color: #ffffff;
-    //border: 3px solid #ffffff;
-}
-
-.botones .contenedor .btn Button:nth-child(odd):hover {
-  background: #ff1557c2 0% 0% no-repeat padding-box;
-}
-
-.botones .contenedor .btn Button:nth-child(even):hover {
-    background: #ffffff 0% 0% no-repeat padding-box;
-    color: #5640ff;
-}
-
-/*IMAGEN LAPTOP*/
-.laptop {
-    max-width: 100%;
+.laptop img {
+    width: 50%;
     position: absolute;
-    bottom: 190px;
-    left: 850px;
-    width: 698px;
-    height: 465px;
+    left: 750px;
+    right: 0;
+    top: 25%;
+}
+.botones {
+    width: 50%;
+    display: flex;
+    position: relative;
+    top: 170px;
+    left: 2%;
+}
+.botones Button:nth-child(odd) {
+    text-align: center;
+    line-height: 45px;
+    margin: 20px;
+    width: 200px;
+    height: 50px;
+    background: #ff1558 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    opacity: 1;
+    text-decoration: none;
+    color: #ffffff;
 }
 
-@media (max-width: 768px) {
+.botones Button:nth-child(even) {
+    text-align: center;
+    line-height: 45px;
+    margin: 20px;
+    width: 200px;
+    height: 50px;
+    background: transparent 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    opacity: 1;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #ffff;
 }
 
+.botones Button:hover {
+    background: #ff1558 0% 0% no-repeat padding-box;
+}
 
+/*responsive*/
+
+@media screen and (max-width: 768px) {
+    .logo img {
+        max-width: 100%;
+    }
+
+    .text-main h1,
+    h3 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .botones {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .laptop img {
+        width: 200%;
+        left: 5%;
+        display: block;
+        top: 180%;
+    }
+}
 </style>

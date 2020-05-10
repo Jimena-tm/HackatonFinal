@@ -12,7 +12,6 @@
 <script>
 import Selector from "./Selector";
 import Buscador from "./Buscador";
-
 export default {
   name: "Appbar",
   components: { Selector, Buscador },
@@ -25,25 +24,26 @@ export default {
           "Back-End",
           "Desarrollo de APPS",
           "Diseño UX",
-          "Desarrollo de Videojegos en Unity",
-        ],
+          "Desarrollo de Videojegos en Unity"
+        ]
       },
       selectOrderData: {
         title: "Ordenar por:",
-        options: ["A-Z", "Z-A"],
+        options: ["A-Z", "Z-A"]
       },
       selectFilter: {
         title: "Filtrar",
-        options: ["Programa de Especializacion", "Ordenar por"],
-      },
+        options: ["Programa de Especializacion", "Ordenar por"]
+      }
     };
-  },
+  }
 };
 </script>
 <style lang="scss" scoped>
 #Appbar {
   height: 50px;
   display: flex;
+  justify-content: center;
   * {
     margin-right: 10px;
   }
