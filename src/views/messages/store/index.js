@@ -7,7 +7,9 @@ export default {
   actions: {},
   mutations: {
     setMessages(state, payload) {
-      fetch("http://localhost:3000/messages")
+      fetch(
+        "https://my-json-server.typicode.com/Mariega/jsonServerHackatonFinal/messages"
+      )
         .then((response) => response.json())
         .then((messages) => {
           state.messages = messages;

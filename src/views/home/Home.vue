@@ -121,17 +121,20 @@ export default {
       fetchUsers: "usersStore/setUsers"
     }),
     handleSubmit() {
-      fetch(`http://localhost:3000/users/${this.id}`, {
-        method: "PATCH",
-        body: JSON.stringify({
-          firstTime: false,
-          profile: this.profile,
-          email: this.email
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8"
+      fetch(
+        `https://my-json-server.typicode.com/Mariega/jsonServerHackatonFinal/users/${this.id}`,
+        {
+          method: "PATCH",
+          body: JSON.stringify({
+            firstTime: false,
+            profile: this.profile,
+            email: this.email
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8"
+          }
         }
-      })
+      )
         .then(response => response.json())
         .then(user => this.setUser(user));
     },

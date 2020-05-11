@@ -1,25 +1,32 @@
-import { SUCCESS_REGISTER, SET_LOGIN, SET_USER } from './mutatios-type';
+import { SUCCESS_REGISTER, SET_LOGIN, SET_USER } from "./mutatios-type";
 
 const ACTIONS = {
   register({ commit }, payload) {
-    fetch('http://localhost:3000/users', {
-      method: 'POST',
-      body: JSON.stringify(payload),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
+    fetch(
+      "https://my-json-server.typicode.com/Mariega/jsonServerHackatonFinal/users",
+      {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    )
       .then((response) => response.json())
       .then(() => commit(SUCCESS_REGISTER, true))
       .catch(() => commit(SUCCESS_REGISTER, false));
   },
   login({ commit }, payload) {
-    fetch('http://localhost:3000/users')
+    fetch(
+      "https://my-json-server.typicode.com/Mariega/jsonServerHackatonFinal/users"
+    )
       .then((response) => response.json())
       .then((users) => {
         /* eslint-disable */
         const user = users.find(
-          (user) => user.username === payload.username && user.password === payload.password
+          (user) =>
+            user.username === payload.username &&
+            user.password === payload.password
         );
         if (user) {
           commit(SET_USER, user);

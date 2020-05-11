@@ -6,7 +6,9 @@ export default {
   actions: {},
   mutations: {
     setUsers(state, payload) {
-      fetch("http://localhost:3000/users")
+      fetch(
+        "https://my-json-server.typicode.com/Mariega/jsonServerHackatonFinal/users"
+      )
         .then((response) => response.json())
         .then((users) => {
           state.users = users;

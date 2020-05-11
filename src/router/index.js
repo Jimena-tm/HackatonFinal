@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/landing",
-    name: "Lading",
+    name: "Landing",
     component: () => import("../views/landing/Landing.vue"),
   },
   {
@@ -46,7 +46,7 @@ const routes = [
     ],
     beforeEnter: (to, from, next) => {
       if (store.state.authStore.isLogin) next();
-      next({ name: "Login" });
+      next({ name: "Landing" });
     },
   },
 ];
